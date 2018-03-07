@@ -1,0 +1,495 @@
+@charset "utf-8";
+/*!
+ * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+ body {
+    overflow-x: hidden;
+ }
+
+/* Toggle Styles */
+
+#wrapper {
+	clear:both;
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 100%;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 100%;
+    width: 0;
+    height: 100%;
+    margin-left: -100%;
+    overflow-y: auto;
+    background: #464547;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 100%;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    /*padding: 15px;*/
+	padding:0;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -100%;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 0px;
+    line-height: 40px;
+	padding-top:4px;
+	
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+	text-align:center;
+}
+.sidebar-nav li a i{
+	font-size:2em;
+}
+.sidebar-nav li:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+.sidebar-back{
+	font-size:2em;
+	color:#fff;
+	 margin-left:10px;
+	}
+.consult{
+	top: 270px;
+    height: 204px;
+    position:absolute;
+    left: 0px;
+    width: 80px;
+    z-index: 9999;
+	}
+.consult-box {
+    float: left;
+    position: relative;
+}
+.consult-box a.a {
+    cursor: pointer;
+    display: block;
+    height: 50px;
+    margin-bottom: 1px;
+    width: 50px;
+}
+.atthereQq{
+	  width:200px;
+	  height:200px;
+	  position:fixed;
+	  background:#5a9bd5;
+	  z-index:9999;
+	  left:-200px;
+	  display:none;
+	  padding:10px 40px;
+	  -box-shadow:0 0 20px #b8b3b3;
+	  -webkit-box-shadow:0 0 20px #b8b3b3;
+	  -moz-box-shadow:0 0 20px #b8b3b3;
+	  -o-box-shadow:0 0 20px #b8b3b3;
+	}
+.atthereQq p{
+	font-size:10px;
+	color:#fff;
+	}
+.atthereQq p img{
+	width:60%;
+	}
+	
+.atthereWechat{
+	  width:200px;
+	  height:200px;
+	  position:fixed;
+	  background:#5a9bd5;
+	  z-index:9999;
+	  left:-200px;
+	  display:none;
+	  padding:10px 10px 10px 25px;
+	  -box-shadow:0 0 20px #b8b3b3;
+	  -webkit-box-shadow:0 0 20px #b8b3b3;
+	  -moz-box-shadow:0 0 20px #b8b3b3;
+	  -o-box-shadow:0 0 20px #b8b3b3;
+	}
+.atthereWechat img{
+	  width:50%;
+	  height:50%;
+	   border:2px solid red;
+	}
+.atthereTel{
+	  width:200px;
+	  height:80px;
+	  position:fixed;
+	  background:#5a9bd5;
+	  z-index:9999;
+	  left:-200px;
+	  display:none;
+	  padding:0px 30px;
+	  -box-shadow:0 0 20px #b8b3b3;
+	  -webkit-box-shadow:0 0 20px #b8b3b3;
+	  -moz-box-shadow:0 0 20px #b8b3b3;
+	  -o-box-shadow:0 0 20px #b8b3b3;
+	}
+	.atthereTel h6{
+	  line-height:60px;
+	  color:#fff;
+	}
+
+/*
+.atthereQq{
+	background:red;
+	}
+.atthereWechat{
+	background:red;
+	}
+
+.atthereTel{
+	background:red;
+	}
+	
+	
+
+.atthere div.tencent {
+    background-color: #5a9bd5;
+	color:#fff;
+    border: 0px solid #d7d7d7;
+    display: block;
+    height: 200px;
+    left: 55px;
+    position: absolute;
+    top: 0;
+    width: 180px;
+	padding-left: 10px;
+    padding-top: 0px;
+}
+.atthere div.tencent p{
+	color:#fff;
+	
+	font-size:18px;
+}
+
+.atthere div.tel {
+    background-color: #5a9bd5;
+    border: 0px solid #d7d7d7;
+    display: none;
+    height: 28px;
+    left: 55px;
+    position: absolute;
+    top: 0px;
+    width: 177px;
+    padding-left: 10px;
+	
+}
+.atthere div.tel p {
+    color: #fff;;
+    font-family: arial;
+    font-size: 18px;
+    line-height:28px;
+}
+
+.atthere div.tel strong {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+.atthere div.code {
+    background-color: #5a9bd5;
+    border: 0px solid #d9d9d9;
+    display: none;
+    height: 200px;
+    left: 55px;
+    padding-left: 10px;
+    padding-top: 10px;
+    position: absolute;
+    top: 0;
+    width: 178px;
+}
+.atthere div.code p{
+    color: #fff;
+}
+*/
+.navbar-brand img{
+	display:inlne-block;
+	margin-left:30%;
+	margin-top:-28px;
+	}
+	.sidebar-brand img{
+	display:none;
+	}	
+	.sidebar-brand{
+		background:#000;
+		}
+	.sidebar-brand i{
+	display:block;
+	float:right;
+	color:#fff;
+	}	
+	
+	.sidebarnav_bt span {
+    display: inline-block;
+}
+
+	.sidebar-brand span{
+		display:inline-block;
+	}	
+	.sidebar-nav li a {
+		text-align:left;
+		text-indent:10px;
+	}
+
+@media(min-width:360px) {
+.atthereQq{
+	  width:200px;
+	  height:200px;
+	  position:fixed;
+	  background:#5a9bd5;
+	  z-index:9999;
+	  left:0px;
+
+	}
+.atthereWechat{
+	  width:200px;
+	  height:200px;
+	  position:fixed;
+	  background:#5a9bd5;
+	  z-index:9999;
+	  left:0px;
+	}
+.atthereWechat img{
+	  width:80%;
+	  height:80%;
+	  border:2px solid green;
+	}
+.atthereTel{
+	  width:200px;
+	  height:80px;
+	  position:fixed;
+	  background:#5a9bd5;
+	  z-index:9999;
+	  left:0px;
+	}
+	.atthereTel h5{
+	  line-height:60px;
+	  color:#fff;
+	}
+.navbar-brand img{
+	display:inlne-block;
+	margin-left:50%;
+	transform:translate(-55%)
+	margin-top:-28px;
+	}
+	.sidebar-brand i{
+	display:block;
+	float:right;
+	color:#fff;
+	}	
+}
+@media(min-width:640px) {
+
+
+.atthereQq{
+	  width:200px;
+	  height:200px;
+	  position:fixed;
+	  background:#5a9bd5;
+	  z-index:9999;
+	  left:0px;
+
+	}
+.atthereWechat{
+	  width:150px;
+	  height:150px;
+	  position:fixed;
+	  background:#5a9bd5;
+	  z-index:9999;
+	  left:0px;
+	  padding:10px;
+
+	}
+.atthereWechat img{
+	  width:100%;
+	  height:100%;
+	  border:2px solid pink;
+	}
+.atthereTel{
+	  width:200px;
+	  height:80px;
+	  position:fixed;
+	  background:#5a9bd5;
+	  z-index:9999;
+	  left:0px;
+	}
+	.atthereTel h5{
+	  line-height:60px;
+	  color:#fff;
+	}
+.navbar-brand img{
+	display:inlne-block;
+	margin-left:60%;
+	margin-top:-20px;
+	
+	}
+	.sidebar-brand i{
+	display:block;
+	float:right;
+	color:#fff;
+	}	
+	.sidebar-nav li a {
+		text-indent:10px;
+	}
+}
+
+@media(min-width:768px) {
+	.sidebar-nav li a {
+		text-indent:0px;
+	}
+
+	.atthereQq{
+	  width:200px;
+	  height:200px;
+	  background:#5a9bd5;
+	  position:fixed;
+	  left:-200px;
+	  z-index:99;
+	  padding-top:20px;
+	  padding-left:40px;
+	}
+   .atthereWechat{
+	  width:150px;
+	  height:130px;
+	  background:#5a9bd5;
+	  position:fixed;
+	  left:-200px;
+	  z-index:98;
+	  padding-left:20px;
+	}
+.atthereWechat img{
+	  width:100%;
+	  height:100%;
+	  border:2px solid blue;
+	}
+	.atthereTel{
+	  width:200px;
+	  height:80px;
+	  background:#5a9bd5;
+	  position:fixed;
+	  left:-200px;
+	  z-index:97;
+	}
+	.atthereTel h5{
+	  line-height:60px;
+	  color:#fff;
+	}
+    .navbar-brand img{
+	display:none;
+	}
+	
+	.sidebar-brand img{
+	display:block;
+	margin-top:10px;
+	}	
+	.sidebar-brand i{
+	display:none;
+	}	
+	.sidebar-brand{
+		background:#464547;
+		}
+	.sidebarnav_bt span {
+		display:block;
+	}	
+	.sidebar-nav li a{
+		text-align:center;
+		padding:0px;
+		
+	}
+	
+	
+    #wrapper {
+        padding-left: 135px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 135px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding:0px /*20px*/;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+	.sidebar-back{
+	 margin-left:50px;
+	}
+
+}
